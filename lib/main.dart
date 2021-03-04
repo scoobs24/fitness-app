@@ -3,7 +3,7 @@ import 'package:Capstone/meal_list.dart';
 import 'package:Capstone/title_nav.dart';
 import 'package:flutter/material.dart';
 import 'package:Capstone/models/meal.dart';
-import 'package:Capstone/date_list.dart';
+import 'package:Capstone/calendar.dart';
 import 'package:Capstone/calorie_total.dart';
 
 void main() {
@@ -47,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
       child: Column(
         children: <Widget>[
           TitleAndNav(),
-          DateList(),
+          MyCalendar(),
           MealList(_userMeals),
           CalorieTotal(),
           AddMealButton(),
