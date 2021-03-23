@@ -1,8 +1,6 @@
 class Meal {
-  int mealNumber;
-  String title;
-  double calories;
-  DateTime time;
-
-  Meal(this.mealNumber, this.title, this.calories, this.time);
+  final String title;
+  final double calories;
+  final DateTime time;
+  Meal(this.title, this.calories, this.time);
 }

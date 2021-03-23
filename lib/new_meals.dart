@@ -23,9 +23,10 @@ class _NewMealState extends State<NewMeal> {
 
     if (enteredTitle.isEmpty || enteredAmount <= 0) {
       return;
+    } else {
+      widget.addMeal(enteredTitle, enteredAmount);
+      Navigator.of(context).pop();
     }
-    widget.addMeal(enteredTitle, enteredAmount);
-    Navigator.of(context).pop();
   }
 
   @override
@@ -37,12 +38,12 @@ class _NewMealState extends State<NewMeal> {
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: <Widget>[
                   TextField(
-                    decoration: InputDecoration(labelText: 'Title'),
+                    decoration: InputDecoration(labelText: 'Food'),
                     controller: titleController,
                     onSubmitted: (_) => submitData(),
                   ),
                   TextField(
-                    decoration: InputDecoration(labelText: 'Amount'),
+                    decoration: InputDecoration(labelText: 'Calories'),
                     controller: calController,
                     keyboardType:
                         TextInputType.numberWithOptions(decimal: true),

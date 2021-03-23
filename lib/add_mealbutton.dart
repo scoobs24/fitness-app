@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
 class AddMealButton extends StatelessWidget {
+  final Function startAddNewMeal;
+  final Function _addNewMeal;
+
+  AddMealButton(this._addNewMeal, this.startAddNewMeal);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -9,7 +14,7 @@ class AddMealButton extends StatelessWidget {
         child: FloatingActionButton(
           backgroundColor: Colors.white,
           foregroundColor: Colors.black,
-          onPressed: () => {},
+          onPressed: () => startAddNewMeal(context),
           child: Container(
             child: Icon(
               Icons.add,

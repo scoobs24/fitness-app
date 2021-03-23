@@ -9,12 +9,15 @@ class TitleAndNav extends StatelessWidget {
         child: Row(children: [
           Container(
               padding: EdgeInsets.only(right: 10),
-              child: Icon(
-                Icons.menu,
-                size: 30,
+              child: IconButton(
+                icon: Icon(
+                  Icons.menu,
+                  size: 30,
+                ),
+                onPressed: () {},
               )),
           Container(
-            padding: EdgeInsets.only(left: 80),
+            padding: EdgeInsets.only(left: 65),
             child: Text(
               "MEALS",
               style: TextStyle(fontSize: 30),
