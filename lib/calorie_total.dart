@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 
 class CalorieTotal extends StatelessWidget {
   @override
+  double totalCalories;
+  CalorieTotal(this.totalCalories);
   Widget build(BuildContext context) {
     return Column(children: [
       Container(
-        child: Text("400", style: TextStyle(fontSize: 55)),
+        child: Text(totalCalories.toString(), style: TextStyle(fontSize: 55)),
       ),
       Container(
         child: Text("Calories"),
