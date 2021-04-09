@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import "package:Capstone/models/meal.dart";
+import './models/meal.dart';
 
 class MealList extends StatelessWidget {
   final List<Meal> meals;
